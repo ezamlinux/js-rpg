@@ -1,5 +1,3 @@
-// Heritage 
-
 const JSON_URL = "data/data.json";
 const moveSpeed = 1;
 const timeSpeed = 5;
@@ -12,22 +10,6 @@ var farm 	= null;
 var perso 	= null;
 var mapArrow = null;
 var mapContainer = null;
-
-function faireHeriter(parentClass, childClass)
-{
-	var obj = new Object();
-	var prop = null;
-	
-	for( prop in parentClass.prototype ){
-		obj[prop] = parentClass.prototype[prop];
-	}
-	
-	for( prop in childClass.prototype ){
-		obj[prop] = childClass.prototype[prop];
-	}
-	
-	childClass.prototype = obj;
-}
 
 function getCharacterInfoByType( param_type, param_data )
 {
@@ -71,21 +53,6 @@ function mouseDown(event)
 
 function mouseOutHandler(event)
 {
-	// switch(event.target.id) eZam : Why ?
-	// {
-		// case "img_gauche":
-			// control.stop();
-			// break;		
-		// case "img_haut":
-			// control.stop();
-			// break;		
-		// case "img_droite":
-			// control.stop();
-			// break;		
-		// case "img_bas":
-			// control.stop();
-			// break;
-	// }
 	control.stop();
 }
 
@@ -107,7 +74,7 @@ function gameReady(data)
 	farm 	= new Map(20, 15, mapContainer);
 	farm.generate(data.map);
 	
-	perso = new Personnage( getCharacterInfoByType("_warrior_", data.characters) );
+	perso = new Warrior( getCharacterInfoByType("_warrior_", data.characters) );
 	perso.width = CASE_WIDTH;
 	perso.height = CASE_HEIGHT;
 	
@@ -125,13 +92,6 @@ function gameReady(data)
 
 function start(param_event)
 {	
-	faireHeriter(Actor, PNJ);
-	faireHeriter(Actor, Personnage);
-	faireHeriter(Personnage, Warrior);
-	faireHeriter(Personnage, Wizard);
-	faireHeriter(Item, MagicWand);
-	faireHeriter(Item, Weapon);
-	
 	$.ajax(
 	{
 		type: 		"GET",
