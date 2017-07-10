@@ -1,6 +1,9 @@
-function MagicWand(data)
+function MagicWand extends Item
 {
-	Item.apply(this, [data]);
-	this.power 		= data.power;
-	this.consoMana 	= data.consoMana;
+	constructor(data)
+	{
+		super([data]);
+		this.power 		= data.power;
+		this.consoMana 	= data.consoMana;
+	}
 }

@@ -76,7 +76,7 @@ class Actor
 		node.style.backgroundImage 		= "url('" + this.img + "')";
 		node.style.backgroundPosition 	= decalX + "px " + decalY + "px";
 	}
-
+	
 	moveLeft(param_value)
 	{
 		this._anim = this._animations["walk_left"];

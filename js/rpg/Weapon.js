@@ -1,8 +1,11 @@
 /*hérite d'item*/
-function Weapon(data)
+function Weapon extends Item
 {
-	Item.apply(this, [data]);
-	this.power = data.power;
+	constructor(data)
+	{
+		super([data]);
+		this.power = data.power;
+	}
 }
 	
 	

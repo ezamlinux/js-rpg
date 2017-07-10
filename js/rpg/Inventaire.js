@@ -1,56 +1,56 @@
-function Inventaire(maxWeight)
+class Inventaire
 {
-	this.maxWeight = maxWeight;
-}
+	constructor(maxWeight)
+	{		
+		this.maxWeight = maxWeight;
+	}
+	
+	//accesseurs items
+	setItems(value)
+	{
+		this._items = value;
+	}
 
-Inventaire.prototype._items = null;
-Inventaire.prototype._bourse = null;
+	getItems()
+	{
+		return this._items;
+	}
 
-//accesseurs items
-Inventaire.prototype.setItems = function(value)
-{
-	this._items = value;
-}
+	//accesseurs bourse
+	setBourse(value)
+	{
+		this._bourse = value;
+	}
 
-Inventaire.prototype.getItems = function()
-{
-	return this._items;
-}
+	getBourse()
+	{
+		return this._bourse;
+	}
 
-//accesseurs bourse
-Inventaire.prototype.setBourse = function(value)
-{
-	this._bourse = value;
-}
+	//méthodes d'Inventaire
 
-Inventaire.prototype.getBourse = function()
-{
-	return this._bourse;
-}
+	addItem(item)
+	{
 
-//méthodes d'Inventaire
+	}
 
-Inventaire.prototype.addItem = function(item)
-{
+	removeItem(item)
+	{
 
-}
+	}
 
-Inventaire.prototype.removeItem = function(item)
-{
+	getItems(item)
+	{
 
-}
+	}
 
-Inventaire.prototype.getItems = function(item)
-{
+	getAmount(item)
+	{
 
-}
+	}
 
-Inventaire.prototype.getAmount = function(item)
-{
+	getItemsByType()
+	{
 
-}
-
-Inventaire.prototype.getItemsByType = function()
-{
-
+	}
 }
