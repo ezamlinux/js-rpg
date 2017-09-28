@@ -27,4 +27,3 @@ class Tile
 		node.style.zIndex 			= 10;
 	}
 }
-

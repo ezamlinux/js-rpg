@@ -1,4 +1,3 @@
-/*hérite d'item*/
 class LifePotion extends Item
 {
 	constructor(data)

@@ -1,7 +1,6 @@
-/*hérite d'item*/
-function ManaPotion extends Item
+class ManaPotion extends Item
 {
-	constructor
+	constructor(data)
 	{
 		super([data.nom,data.type,data.price,data.weight]);
 		this.restoration = data.restoration;

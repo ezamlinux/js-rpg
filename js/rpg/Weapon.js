@@ -1,5 +1,4 @@
-/*hérite d'item*/
-function Weapon extends Item
+class Weapon extends Item
 {
 	constructor(data)
 	{

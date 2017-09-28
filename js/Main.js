@@ -96,7 +96,7 @@ function start(param_event)
 	{
 		type: 		"GET",
 		dataType: 	"json",
-	  	url: 		"data/data.json"
+	  	url: 		JSON_URL
 	}
 	).done( gameReady )
 	.fail( gameFail );

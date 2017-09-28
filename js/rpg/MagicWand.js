@@ -1,4 +1,4 @@
-function MagicWand extends Item
+class MagicWand extends Item
 {
 	constructor(data)
 	{
